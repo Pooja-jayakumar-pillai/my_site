@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>VIEW</title>
+</head>
+<body>
+<h1>{{post.title}}</h1>
+<p>{{post.content}}</p>
+
+<img height="300px" src="/media/blog.img/+{{ post.img }}"/>
+<p>{{post.pub_date}}</p>
+
+<ul>
+
+    {% for comment in comments %}
+        <li>{{ comment.comment_text }}</li>
+    {% endfor %}
+</ul>
+</body>
+</html>

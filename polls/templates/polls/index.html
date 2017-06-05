@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static  'polls/css/style.css' %}" rel="stylesheet">
+
+</head>
+<body>
+{{ object_list }}
+
+{% for i in object_list %}
+    <a  class="text" href="{% url 'question_detail' i.id %}">{{ i.question_text}}</a>
+    <p class="date">{{i.pub_date}} </p>
+{% endfor %}
+<img src="{%static 'polls/images/dibujos de doraemon para imprimir 2.jpg'%}"/>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
