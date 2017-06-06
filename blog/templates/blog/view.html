@@ -1,21 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>VIEW</title>
-</head>
-<body>
-<h1>{{post.title}}</h1>
-<p>{{post.content}}</p>
+{% extends 'blog/base.html' %}
+{% block title %}post.content {% endblock %}
 
-<img height="300px" src="/media/blog.img/+{{ post.img }}"/>
-<p>{{post.pub_date}}</p>
+{% block body %}
+<div id="cover-detail" style="background-image: url('/media/{{ post.img }}');">
+    <h1 id="cover-text">{{post.title}}</h1>
 
-<ul>
+</div>
 
-    {% for comment in comments %}
-        <li>{{ comment.comment_text }}</li>
-    {% endfor %}
-</ul>
-</body>
-</html>
+<div id="post-content">
+    <div class="post-detail">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8">
+
+                    <h1>{{post.title}}</h1>
+                    <br>
+                    <p>{{post.content}}</p>
+                </div>
+                <div class="col-md-4">
+                    <a href="{% url 'delete_post' post.id %}"><button>Delete</button></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

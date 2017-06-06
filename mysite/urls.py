@@ -18,6 +18,8 @@ from django.contrib import admin
 #from polls import views
 #from polls.views import QuestionListView, QuestionDetailView
 from blog.views import home
+from django.conf.urls.static import static
+from mysite import settings
 
 urlpatterns = [
 
@@ -28,5 +30,5 @@ urlpatterns = [
      url(r'^admin/', admin.site.urls),
      #url(r'^polls/',polls.urls),
      url(r'^blog/',include("blog.urls")),
-]
+] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
 
