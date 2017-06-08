@@ -99,5 +99,11 @@ def signup(request):
            return redirect('login')
     return render(request,template,context)
 
+#def view_comment (request,postno):
+ #   Post=post.objects.filter(id=int(postno))
+  #  com= comment.objects.filter(Post=post)
+   # template_name = 'blog/view.html'
+    #context={'comments':com}
+    #return render(request,template_name,context)
 
 
