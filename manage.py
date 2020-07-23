@@ -2,7 +2,7 @@
 import os
 import sys
 import numpy
-
+import matplot
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
     try:
