@@ -4,10 +4,7 @@
 
 ### heading 2
 
-1. abc
-2. xyz
-+ 
-nsdfjjkf
-djsjsdhjsdjk
-dnnscjhskdcds
+1.  abc
+2.  xyz
+
 [code](https://pixlr.com/x/)
